@@ -1,9 +1,10 @@
 import { FC, useCallback, useMemo, useState } from 'react';
 import { Integration } from '@prisma/client';
 import useSWR from 'swr';
+import { motion, AnimatePresence } from 'motion/react';
 import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
 import { ChartSocial } from '@gitroom/frontend/components/analytics/chart-social';
-import { LoadingComponent } from '@gitroom/frontend/components/layout/loading';
+import { AnalyticsLoading } from '@gitroom/frontend/components/platform-analytics/analytics.loading';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
 
 interface AnalyticsDataItem {
@@ -59,7 +60,14 @@ const AnalyticsCard: FC<{
   const hasDataPoints = item.data.length >= 1;
 
   return (
-    <div className="group relative">
+    <motion.div
+      className="group relative"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.35, delay: index * 0.06, ease: 'easeOut' }}
+      whileHover={{ y: -3 }}
+      whileTap={{ scale: 0.98 }}
+    >
       <div
         className={`
           flex flex-col h-full
@@ -67,7 +75,7 @@ const AnalyticsCard: FC<{
           border border-newTableBorder
           rounded-[12px]
           overflow-hidden
-          transition-all duration-200
+          transition-colors duration-200
           hover:border-[#612bd3]/50
         `}
       >
@@ -103,21 +111,33 @@ const AnalyticsCard: FC<{
 
             {/* Value */}
             <div className="px-[16px] pb-[14px]">
-              <div className="text-[36px] leading-[42px] font-semibold tracking-tight">
+              <motion.div
+                key={total}
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.25 }}
+                className="text-[36px] leading-[42px] font-semibold tracking-tight"
+              >
                 {total}
-              </div>
+              </motion.div>
             </div>
           </>
         ) : (
           /* Single value display */
           <div className="flex-1 flex flex-col items-center justify-center py-[32px] px-[16px]">
-            <div className="text-[48px] leading-[56px] font-semibold tracking-tight">
+            <motion.div
+              key={total}
+              initial={{ opacity: 0, y: 4 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.25 }}
+              className="text-[48px] leading-[56px] font-semibold tracking-tight"
+            >
               {total}
-            </div>
+            </motion.div>
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -231,24 +251,26 @@ export const RenderAnalytics: FC<{
   if (loading) {
     return (
       <div className="flex items-center justify-center py-[48px]">
-        <LoadingComponent />
+        <AnalyticsLoading />
       </div>
     );
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px]">
-      {data?.length === 0 && (
-        <EmptyState onRefresh={refreshChannel(integration as any)} />
-      )}
-      {data?.map((item: AnalyticsDataItem, index: number) => (
-        <AnalyticsCard
-          key={`analytics-${index}`}
-          item={item}
-          total={totals[index]}
-          index={index}
-        />
-      ))}
-    </div>
+    <AnimatePresence mode="wait">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px]">
+        {data?.length === 0 && (
+          <EmptyState onRefresh={refreshChannel(integration as any)} />
+        )}
+        {data?.map((item: AnalyticsDataItem, index: number) => (
+          <AnalyticsCard
+            key={`analytics-${index}`}
+            item={item}
+            total={totals[index]}
+            index={index}
+          />
+        ))}
+      </div>
+    </AnimatePresence>
   );
 };

@@ -42,6 +42,32 @@
     --youtube-button: #F1F1F1;
     --youtube-action-color: #272727;
     --youtube-svg-border: #A0A0A0;
+
+    /* Bklit UI chart theme (dark) */
+    --chart-background: transparent;
+    --chart-foreground: #ffffff;
+    --chart-foreground-muted: #9c9c9c;
+    --chart-label: #9c9c9c;
+    --chart-line-primary: #612bd3;
+    --chart-line-secondary: #32d583;
+    --chart-crosshair: #454444;
+    --chart-grid: #2b2b2b;
+    --chart-indicator-color: #612bd3;
+    --chart-indicator-secondary-color: #32d583;
+    --chart-marker-background: #1e1d1d;
+    --chart-marker-border: #612bd3;
+    --chart-marker-foreground: #ffffff;
+    --chart-marker-badge-background: #612bd3;
+    --chart-marker-badge-foreground: #ffffff;
+    --chart-segment-background: rgba(97, 43, 211, 0.08);
+    --chart-segment-line: #612bd3;
+    --chart-brush-border: #2b2b2b;
+    --chart-tooltip-background: #1e1d1d;
+    --chart-1: #612bd3;
+    --chart-2: #32d583;
+    --chart-3: #1d9bf0;
+    --chart-4: #fc69ff;
+    --chart-5: #d82d7e;
   }
   .light {
     --new-back-drop: #2d1b57;
@@ -93,6 +119,32 @@
     --youtube-button: #000;
     --youtube-action-color: #F1F1F1;
     --youtube-svg-border: #1A1A1A;
+
+    /* Bklit UI chart theme (light) */
+    --chart-background: transparent;
+    --chart-foreground: #0e0e0e;
+    --chart-foreground-muted: #777b7f;
+    --chart-label: #777b7f;
+    --chart-line-primary: #612bd3;
+    --chart-line-secondary: #1a9c5c;
+    --chart-crosshair: #d5d9dd;
+    --chart-grid: #e7e9eb;
+    --chart-indicator-color: #612bd3;
+    --chart-indicator-secondary-color: #1a9c5c;
+    --chart-marker-background: #ffffff;
+    --chart-marker-border: #612bd3;
+    --chart-marker-foreground: #0e0e0e;
+    --chart-marker-badge-background: #612bd3;
+    --chart-marker-badge-foreground: #ffffff;
+    --chart-segment-background: rgba(97, 43, 211, 0.06);
+    --chart-segment-line: #612bd3;
+    --chart-brush-border: #e7e9eb;
+    --chart-tooltip-background: #ffffff;
+    --chart-1: #612bd3;
+    --chart-2: #1a9c5c;
+    --chart-3: #1d9bf0;
+    --chart-4: #d82d7e;
+    --chart-5: #b8860b;
   }
 }
 
