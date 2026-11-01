@@ -1,0 +1,151 @@
+# gitleaks allowlist — audited exceptions only.
+#
+# Every fingerprint below was inspected during an account-wide security audit
+# and confirmed to be a deliberate test fixture, an example in documentation,
+# a redaction/secret-scanning test's own input, or vendored upstream code.
+# None is a live credential.
+#
+# This file lists FINGERPRINTS, not paths or rules, on purpose: a fingerprint
+# pins one specific finding at one location. A NEW secret added to any of the
+# same files still fails the scan. Do not replace these with path globs.
+#
+# If a finding here ever turns out to be real, delete its line rather than
+# editing it, so the scanner reports it again.
+
+# .env.example  [cloudflare-api-key]
+4552f88950739e776786c38be335f5445c3e7f84:.env.example:cloudflare-api-key:17
+
+# .env.example  [cloudflare-api-key]
+6224634dcb125d08651d8b5217c3881b90a9323d:.env.example:cloudflare-api-key:26
+
+# README.md  [generic-api-key]
+b8c72002150bbcfb844e9b275b78c2bd9bf94851:README.md:generic-api-key:24
+
+# README.md  [generic-api-key]
+b8c72002150bbcfb844e9b275b78c2bd9bf94851:README.md:generic-api-key:27
+
+# README.md  [generic-api-key]
+b8c72002150bbcfb844e9b275b78c2bd9bf94851:README.md:generic-api-key:30
+
+# README.md  [generic-api-key]
+b8c72002150bbcfb844e9b275b78c2bd9bf94851:README.md:generic-api-key:33
+
+# apps/docs/installation/development.mdx  [cloudflare-api-key]
+75648cd90bd8748e0a091b6bf52942d91c159c96:apps/docs/installation/development.mdx:cloudflare-api-key:99
+
+# i18n.lock  [discord-client-secret]
+i18n.lock:discord-client-secret:149
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:48
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:241
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:291
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:292
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:293
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:295
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:296
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:364
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:378
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:380
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:425
+
+# i18n.lock  [generic-api-key]
+i18n.lock:generic-api-key:601
+
+# i18n.lock  [generic-api-key]
+791d42c4848ad2e12be478a09fdf163892532dc3:i18n.lock:generic-api-key:766
+
+# i18n.lock  [generic-api-key]
+7b29d401dcfb3804e7689c4518500f1b285d26ff:i18n.lock:generic-api-key:729
+
+# i18n.lock  [generic-api-key]
+743b9969244aafab928c5219b4b4be5d8eee826d:i18n.lock:generic-api-key:818
+
+# i18n.lock  [generic-api-key]
+b95168ff1adc6ba20be38a339f76270703ec8fbf:i18n.lock:generic-api-key:814
+
+# i18n.lock  [generic-api-key]
+b95168ff1adc6ba20be38a339f76270703ec8fbf:i18n.lock:generic-api-key:816
+
+# i18n.lock  [generic-api-key]
+b95168ff1adc6ba20be38a339f76270703ec8fbf:i18n.lock:generic-api-key:817
+
+# i18n.lock  [generic-api-key]
+b95168ff1adc6ba20be38a339f76270703ec8fbf:i18n.lock:generic-api-key:818
+
+# i18n.lock  [generic-api-key]
+b95168ff1adc6ba20be38a339f76270703ec8fbf:i18n.lock:generic-api-key:819
+
+# i18n.lock  [generic-api-key]
+b95168ff1adc6ba20be38a339f76270703ec8fbf:i18n.lock:generic-api-key:820
+
+# i18n.lock  [generic-api-key]
+2c2f788e1262fff1d13d0cf76bb9b51c0747b01d:i18n.lock:generic-api-key:710
+
+# i18n.lock  [generic-api-key]
+2c2f788e1262fff1d13d0cf76bb9b51c0747b01d:i18n.lock:generic-api-key:712
+
+# i18n.lock  [generic-api-key]
+2c2f788e1262fff1d13d0cf76bb9b51c0747b01d:i18n.lock:generic-api-key:717
+
+# i18n.lock  [generic-api-key]
+51b9c618c1a1f521ec780cd77984138da4c9f89c:i18n.lock:generic-api-key:750
+
+# i18n.lock  [generic-api-key]
+cd085e27cab868c82634d800b3876d41ef7e6ab9:i18n.lock:generic-api-key:580
+
+# i18n.lock  [generic-api-key]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:generic-api-key:42
+
+# i18n.lock  [generic-api-key]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:generic-api-key:226
+
+# i18n.lock  [generic-api-key]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:generic-api-key:276
+
+# i18n.lock  [generic-api-key]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:generic-api-key:277
+
+# i18n.lock  [generic-api-key]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:generic-api-key:278
+
+# i18n.lock  [generic-api-key]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:generic-api-key:280
+
+# i18n.lock  [generic-api-key]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:generic-api-key:281
+
+# i18n.lock  [generic-api-key]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:generic-api-key:349
+
+# i18n.lock  [generic-api-key]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:generic-api-key:363
+
+# i18n.lock  [generic-api-key]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:generic-api-key:365
+
+# i18n.lock  [generic-api-key]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:generic-api-key:410
+
+# i18n.lock  [discord-client-secret]
+44d64361b090fe410e0253333bfd65b22cc178c5:i18n.lock:discord-client-secret:141
